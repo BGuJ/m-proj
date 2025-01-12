@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Dashboard{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <button class="menu-button" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <h1>{% block header %}Dashboard{% endblock %}</h1>
+      </div>
+      <div class="header-center">
+        <input type="text" placeholder="Search..." class="search-input" />
+      </div>
+      <div class="header-right">
+        <button class="header-button"><i class="fas fa-bell"></i></button>
+        <button class="header-button"><i class="fas fa-user"></i></button>
+      </div>
+    </header>
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a href="#" title="Dashboard"
+            ><i class="fas fa-tachometer-alt"></i>
+            <span class="menu-text">Dashboard</span></a
+          >
+        </li>
+        <li>
+          <a href="#" title="Sales"
+            ><i class="fas fa-chart-line"></i>
+            <span class="menu-text">Sales</span></a
+          >
+        </li>
+        <li>
+          <a href="#" title="Products"
+            ><i class="fas fa-box"></i>
+            <span class="menu-text">Products</span></a
+          >
+        </li>
+        <li>
+          <a href="#" title="Customers"
+            ><i class="fas fa-users"></i>
+            <span class="menu-text">Customers</span></a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="separator"></div>
+    <div class="main-content">{% block content %}{% endblock %}</div>
+  </body>
+</html>
