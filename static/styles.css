@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20;
+  padding: 0;
   background-color: #1c1c1c;
   color: #fff;
   display: flex;
@@ -47,7 +47,6 @@ header {
 }
 .header-right {
   display: flex;
-  padding: 20px;
   align-items: center;
 }
 .header-button {
@@ -73,6 +72,7 @@ header {
 }
 .sidebar ul li {
   margin: 20px 0;
+  position: relative;
 }
 .sidebar ul li a {
   color: #fff;
@@ -85,6 +85,20 @@ header {
 }
 .menu-text {
   display: inline;
+}
+.submenu {
+  display: none;
+  list-style-type: none;
+  padding-left: 20px;
+}
+.submenu-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
 }
 .separator {
   width: 2px;

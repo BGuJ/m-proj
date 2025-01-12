@@ -17,7 +17,7 @@
   <body>
     <header>
       <div class="header-left">
-        <button class="menu-button" onclick="toggleMenu()" title="Menu">
+        <button class="menu-button" onclick="toggleMenu()">
           <i class="fas fa-bars"></i>
         </button>
         <h1>{% block header %}Dashboard{% endblock %}</h1>
@@ -55,6 +55,41 @@
             ><i class="fas fa-users"></i>
             <span class="menu-text">Customers</span></a
           >
+        </li>
+        <li>
+          <a href="#" title="Colectii"
+            ><i class="fas fa-th-large"></i>
+            <span class="menu-text">Colectii</span></a
+          >
+          <button class="submenu-button" onclick="toggleSubmenu()">
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul class="submenu">
+            <li>
+              <a href="#" title="Noutati"
+                ><i class="fas fa-newspaper"></i>
+                <span class="menu-text">Noutati</span></a
+              >
+            </li>
+            <li>
+              <a href="#" title="Materiale"
+                ><i class="fas fa-cubes"></i>
+                <span class="menu-text">Materiale</span></a
+              >
+            </li>
+            <li>
+              <a href="#" title="Garajul"
+                ><i class="fas fa-warehouse"></i>
+                <span class="menu-text">Garajul</span></a
+              >
+            </li>
+            <li>
+              <a href="#" title="Depozitul"
+                ><i class="fas fa-boxes"></i>
+                <span class="menu-text">Depozitul</span></a
+              >
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
